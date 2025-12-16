@@ -4,32 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio - María José Anaiz</title>
-    <!-- Carga de Tailwind CSS para estilos rápidos y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Tipografía moderna: Inter */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* Fondo negro suave */
-            color: #e5e7eb; /* Texto gris muy claro para contraste */
+            background-color: #0a0a0a;
+            color: #e5e7eb;
         }
-        /* Estilos específicos para la navegación y efecto hover */
         .nav-link {
             transition: color 0.3s, transform 0.3s;
         }
         .nav-link:hover {
-            color: #ff96c5; /* Rosa vibrante en hover */
+            color: #ff96c5;
             transform: translateY(-2px);
         }
-        /* Clase para destacar elementos interactivos */
         .card-project {
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra más oscura para fondo negro */
-            background-color: #1f2937; /* Fondo de tarjeta oscuro */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background-color: #1f2937;
         }
         .card-project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(255, 150, 197, 0.3); /* Sombra rosa en hover */
+            box-shadow: 0 10px 15px rgba(255, 150, 197, 0.3);
         }
     </style>
     <script>
@@ -37,12 +33,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-pink': '#ff96c5',  /* Rosa vibrante para acentos */
-                        'secondary-pink': '#f3aacb', /* Rosa medio para fondos */
-                        'light-pink': '#fbd5e5',    /* Rosa muy claro para textos claros */
-                        'dark-gray': '#1f2937',     /* Gris oscuro para elementos secundarios */
-                        'text-light': '#e5e7eb',    /* Gris muy claro para textos */
-                        'bg-dark': '#0a0a0a',       /* Fondo general negro suave */
+                        'primary-pink': '#ff96c5',
+                        'secondary-pink': '#f3aacb',
+                        'light-pink': '#fbd5e5',
+                        'dark-gray': '#1f2937',
+                        'text-light': '#e5e7eb',
+                        'bg-dark': '#0a0a0a',
                     }
                 }
             }
@@ -51,21 +47,17 @@
 </head>
 <body class="antialiased">
 
-    <!-- 1. HEADER Y NAVEGACIÓN (Fijo en el tope, adaptable a móvil) -->
     <header class="sticky top-0 z-50 bg-bg-dark shadow-lg border-b border-gray-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo o Nombre -->
             <a href="#inicio" class="text-2xl font-bold text-primary-pink hover:text-light-pink transition duration-300">
                 MJ
             </a>
 
-            <!-- Botón de Menú Móvil (Hamburguesa) -->
             <button id="menu-button" class="md:hidden p-2 rounded-lg text-text-light hover:bg-dark-gray transition duration-300">
                 <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
 
-            <!-- Menú de Navegación (visible en escritorio, oculto por defecto en móvil) -->
             <div id="nav-menu" class="hidden md:flex space-x-8 text-lg font-medium">
                 <a href="#inicio" class="nav-link text-text-light">Inicio</a>
                 <a href="#sobre-mi" class="nav-link text-text-light">Sobre Mí</a>
@@ -73,13 +65,11 @@
                 <a href="#contacto" class="nav-link text-text-light">Contacto</a>
             </div>
 
-            <!-- Botón de Contacto Destacado (visible en escritorio) -->
             <a href="#contacto" class="hidden md:block bg-primary-pink text-bg-dark py-2 px-5 rounded-lg shadow-lg hover:bg-light-pink transition duration-300 font-medium">
                 Hablemos
             </a>
         </nav>
         
-        <!-- Menú Móvil Desplegable (Fuera del nav principal, visible solo en móvil) -->
         <div id="mobile-menu" class="md:hidden hidden bg-bg-dark border-t border-gray-700">
             <a href="#inicio" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
             <a href="#sobre-mi" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre Mí</a>
@@ -90,13 +80,11 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- 2. SECCIÓN DE INICIO / HERO (Presentación principal) -->
         <section id="inicio" class="py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
-            <!-- Lado de Texto -->
             <div class="md:w-3/5 text-center md:text-left">
                 <p class="text-xl font-medium text-primary-pink mb-3">¡Hola! Soy María José Anaiz</p>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
-                    Diseñadora enfocada en <span class="text-primary-pink">usabilidad</span>
+                    Diseñadora enfocada en <span class="text-primary-pink">la usabilidad</span>.
                 </h1>
                 <p class="text-lg text-text-light mb-8 max-w-xl mx-auto md:mx-0">
                     Busco un enfoque accesible, estético y centrado en el usuario.
@@ -105,20 +93,18 @@
                     Ver mis Proyectos
                 </a>
             </div>
-            <!-- Lado de Imagen/foto (Recomendación: usa una URL de tu foto o un placeholder) -->
             <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
                 <img 
-                    src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/tu_foto.jpg]" 
+                    src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto7.png" 
                     alt="Imagen de perfil de María José Anaiz" 
                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary-pink shadow-2xl"
                     onerror="this.onerror=null; this.src='https://placehold.co/350x350/f3aacb/0a0a0a?text=Avatar';"
-                > <!-- 💡 RECUERDA: Reemplaza SÓLO el "src" con tu ruta real. El "onerror" mantendrá el placeholder en caso de fallas. -->
+                >
             </div>
         </section>
 
         <hr class="border-gray-700 my-16">
 
-        <!-- 3. SECCIÓN SOBRE MÍ (Para establecer tu perfil profesional) -->
         <section id="sobre-mi" class="py-16">
             <h2 class="text-4xl font-bold text-center mb-10 text-white">Sobre Mí</h2>
             <div class="bg-dark-gray p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
@@ -128,7 +114,6 @@
                 <p class="text-lg text-text-light leading-relaxed">
                     Actualmente estoy explorando el mundo textil como un medio material y conceptual para expandir mi práctica.
                 </p>
-                <!-- Opcional: Mis Habilidades -->
                 <div class="mt-8">
                     <h3 class="text-2xl font-semibold mb-4 text-white">Mis habilidades</h3>
                     <div class="flex flex-wrap gap-3">
@@ -144,31 +129,26 @@
 
         <hr class="border-gray-700 my-16">
 
-        <!-- 4. SECCIÓN DE PROYECTOS -->
         <section id="proyectos" class="py-16">
             <h2 class="text-4xl font-bold text-center mb-12 text-white">Mis Trabajos</h2>
             <p class="text-xl text-center text-text-light mb-10 max-w-3xl mx-auto">
                 Aquí encontrarás una selección de mis proyectos más recientes. Cada uno ilustra mi proceso de diseño y mis habilidades técnicas.
             </p>
             
-            <!-- CONTENEDOR DE PROYECTOS (ADAPTABLE) -->
-            <!-- La clave es usar "grid" y cambiar el número de columnas con prefijos responsive (sm:, md:) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- PROYECTO 1 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="https://imgur.com/a/wH8KDeN" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto1.png.png" 
                         alt="Imagen del Proyecto Infografía con Scroll" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+1';"
-                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico/web/</span>
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico/web</span>
                     <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía con scroll</h3>
                     <p class="text-text-light mb-4">
-                        Infografía con scroll realizada en figma, esta presenta el proceso de producción de Coca-cola de manera interactiva a través de "click" y "hover"
+                        Infografía con scroll realizada en Figma, esta presenta el proceso de producción de Coca-cola de manera interactiva a través de "click" y "hover".
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
                     <a href="https://www.figma.com/proto/rfLvfKIkO6dL6g0sbVxOv5/Untitled?node-id=113-527&t=O1LaCuW0HUr58Oep-1" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
                         Visitar infografía 
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -177,20 +157,18 @@
                     </a>
                 </div>
 
-                <!-- PROYECTO 2 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_2.png]" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto2.png.png" 
                         alt="Imagen del Proyecto Micromundos Lowtech" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff96c5/0a0a0a?text=Proyecto+2';"
-                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Lowtech</span>
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Lowtech/Arte</span>
                     <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Micromundos</h3>
                     <p class="text-text-light mb-4">
                         Intervenciones artísticas que crean dioramas realistas instalados en rincones del borde costero de La Cruces. Cada escena dialoga con un poema de Nicanor Parra.
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
                     <a href="https://biologia.uc.cl/litoralis-ciencia-diseno-y-comunidad-en-ecim-para-imaginar-el-futuro-del-litoral-de-los-poetas/" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
                         Conoce más del proyecto
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -199,42 +177,38 @@
                     </a>
                 </div>
 
-                <!-- PROYECTO 3 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_3.png]" 
-                        alt="Imagen del Proyecto Orpheo" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto3.png.png" 
+                        alt="Imagen del Proyecto Self Data Tracking" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fbd5e5/0a0a0a?text=Proyecto+3';"
-                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño de servios</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Orpheo</h3>
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Self Data Tracking</h3>
                     <p class="text-text-light mb-4">
-                        Diseño de tecnología que permite crear un recorrido inmersivo a través de los sentidos que estimula la experiencia de visitar el teatro Zoco.
+                        Diseño de infografía interactiva con scroll, su propósito fue hacer un recuento de cómo interviene en mí las horas de sueño y cómo varían múltiples factores a partir de esto.
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
-                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://dribbble.com/tu_ilustracion]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
-                        Ver Galería 
+                    <a href="https://www.figma.com/proto/VkuJgkHKNAL0CTiROQ6MsP/Infograf%C3%ADa-digital?node-id=1-10&starting-point-node-id=1%3A10&t=jvwdA0RA4SVdaWaS-1" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
+                        Ver infografía 
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.05 8.72a1 1 0 01.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </a>
                 </div>
 
-                <!-- NUEVO PROYECTO 4 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_4.png]" 
-                        alt="Imagen del Proyecto Sistema de Diseño" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto4.png.png" 
+                        alt="Imagen del Proyecto Pop dye!" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff96c5/0a0a0a?text=Proyecto+4';"
                     >
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Teñido textil</span>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Teñido textil/Biomateriales</span>
                     <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Pop dye!</h3>
                     <p class="text-text-light mb-4">
-                        Desarrollo de una alternativa de teñido textil a través de encapsular colorante con biopolímeros.
+                        Desarrollo de una alternativa de teñido textil a través de encapsular colorante con biopolímeros, buscando reducir el impacto ambiental.
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
                     <a href="https://www.canva.com/design/DAGYwqmuKBM/Z4TMRNdIEny34hFeTNhFpg/edit?utm_content=DAGYwqmuKBM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
                         Ver presentación.
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -243,42 +217,38 @@
                     </a>
                 </div>
 
-                <!-- NUEVO PROYECTO 5 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_5.png]" 
-                        alt="Imagen del Proyecto E-commerce con animaciones" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto5.png.png" 
+                        alt="Imagen del Proyecto Afiche" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fbd5e5/0a0a0a?text=Proyecto+5';"
                     >
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Front-End Avanzado</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">E-commerce con React</h3>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Afiche</h3>
                     <p class="text-text-light mb-4">
-                        Desarrollo de una tienda virtual moderna con carrito de compras funcional y gestión de estados.
+                        Esta pieza gráfica fue realizada con el propósito de hacer un llamado a rememorar y recordar los perritos de la zona Las Cruces.
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
-                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://github.com/tu_ecommerce_repo]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
-                        Ver Demo
+                    <a href="#" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
+                        Conoce más
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.05 8.72a1 1 0 01.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </a>
                 </div>
 
-                <!-- NUEVO PROYECTO 6 -->
                 <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_6.png]" 
-                        alt="Imagen del Proyecto Ilustración 3D" 
+                        src="https://raw.githubusercontent.com/majoanaiz/04-ejercicio/root/imagenes/foto6.png.png" 
+                        alt="Imagen del Proyecto Infografía de Exclusión Escolar" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+6';"
                     >
                     <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía</h3>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía Exclusión Escolar</h3>
                     <p class="text-text-light mb-4">
-                        Infografía con estádisticas sobre la exclusión escolar y métodos para prevenir este fénomeno. Esta se basa en una infografía ya realizada con el objetivo de mejorar su lectura visual.
+                        Rediseño visual de una infografía con estadísticas sobre la exclusión escolar y métodos para prevenir este fenómeno, con el objetivo de mejorar su lectura visual.
                     </p>
-                    <!-- ENLACE CON ESTRELLA -->
                     <a href="https://ciae.uchile.cl/biblioteca/didactico/infografia-10-factores-para-la-exclusion-escolar" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center group">
                         Ver infografía original.
                         <svg class="ml-2 w-5 h-5 text-primary-pink transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -286,22 +256,18 @@
                         </svg>
                     </a>
                 </div>
-
             </div>
         </section>
         
         <hr class="border-gray-700 my-16">
 
-        <!-- 5. SECCIÓN DE CONTACTO (Llamada a la acción final) -->
         <section id="contacto" class="py-16">
             <div class="bg-dark-gray p-10 rounded-2xl text-center max-w-4xl mx-auto shadow-2xl border border-gray-700">
                 <h2 class="text-4xl font-bold text-white mb-4">¡Contáctame!</h2>
                 <p class="text-xl text-light-pink mb-8">
                     Estoy abierta a nuevas oportunidades de colaboración y proyectos.
                 </p>
-                <!-- Botón de Contacto: Ahora incluye un ícono de email para mayor claridad -->
                 <a href="mailto:mjanaiz@uc.cl" class="inline-flex items-center bg-primary-pink text-bg-dark text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-light-pink transition duration-300 transform hover:scale-105 font-semibold">
-                    <!-- Icono SVG de Email -->
                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-7 11h-4a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg>
                     Enviar un Email
                 </a>
@@ -310,10 +276,9 @@
 
     </main>
 
-    <!-- 6. FOOTER (Pie de página) -->
     <footer class="bg-bg-dark text-text-light mt-20 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
-            <p>&copy; <span id="year"></span> María José Anaiz.</p>
+            <p>&copy; <span id="year"></span> María José Anaiz. Todos los derechos reservados.</p>
             <p class="mt-1">Correo: mjanaiz@uc.cl</p>
             <div class="flex justify-center space-x-4 mt-4">
                 <a href="https://www.linkedin.com/in/mar%C3%ADa-jos%C3%a9-anaiz-santander-075873346/" target="_blank" class="hover:text-primary-pink transition">LinkedIn</a>
@@ -324,7 +289,6 @@
     </footer>
     
     <script>
-        // JS para el Menú Móvil
         document.getElementById('year').textContent = new Date().getFullYear();
 
         const menuButton = document.getElementById('menu-button');
@@ -333,17 +297,13 @@
         const iconClose = document.getElementById('icon-close');
 
         menuButton.addEventListener('click', () => {
-            // Toggle de la visibilidad del menú
             mobileMenu.classList.toggle('hidden');
-            
-            // Toggle de los íconos (hamburguesa <-> cerrar)
             iconMenu.classList.toggle('hidden');
             iconClose.classList.toggle('hidden');
         });
 
-        // Ocultar el menú móvil si se redimensiona a desktop
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) { // 768px es el breakpoint 'md' de Tailwind
+            if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
                 iconMenu.classList.remove('hidden');
                 iconClose.classList.add('hidden');
